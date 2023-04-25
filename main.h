@@ -18,7 +18,7 @@ typedef struct fmt
 } fmtyp;
 
 int _printf(const char *format, ...);
-int print_op(const char *format, fmt_t *print_arr, va_list list);
+int print_op(const char *format, fmtyp *print_arr, va_list list);
 int ch(va_list character);
 int str(va_list string);
 int _int(va_list integ);
@@ -31,5 +31,4 @@ int _hex_u(va_list hexa);
 int _strlen(char *s);
 int _bin(va_list bin);
 int _putchar(char c);
-
 #endif
