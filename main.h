@@ -7,14 +7,14 @@
 
 /**
  * struct fmt - function to check for formats as indicated by man3printf
- * @type: The format to print char string 
+ * @type: The format to print char string
  * @f: The print function to use
  */
 
 typedef struct fmt
 {
-        char *type;
-        int (*f)();
+	char *type;
+	int (*f)();
 } fmtyp;
 
 int _printf(const char *format, ...);
