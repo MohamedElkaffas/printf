@@ -2,24 +2,24 @@
 
 /**
  * _ui - unsigned int print to stdout
- * @un: list being passed
+ * @unsign: list being passed
  * Return: char count
  */
-int _ui(va_list un)
+int _ui(va_list unsign)
 {
-    unsigned int n;
-    int ex = 1;
-    int ln = 0;
+	unsigned int n;
+	int expo = 1;
+	int ln = 0;
 
-    n = va_arg(un, unsigned int);
+	n = va_arg(unsign, unsigned int);
 
-    while (n / ex > 9)
-        ex *= 10;
-    while (ex != 0)
-    {
-        ln = ln + _putchar(n / ex + '0');
-        n = n % ex;
-        ex = ex / 10;
-    }
-    return (ln);
+	while (n / expo > 9)
+		expo *= 10;
+	while (expo != 0)
+	{
+		ln += _putchar(n / expo + '0');
+		n %= expo;
+		expo = expo / 10;
+	}
+	return (ln);
 }

@@ -2,32 +2,32 @@
 
 /**
  * _oct - function to print octal
- * @o: list being passed
+ * @octo: list being passed
  * Return: updated count
  */
-int _oct(va_list o)
+int _oct(va_list octo)
 {
-    int coun = 0, i;
-    int *a;
-    unsigned int n = va_arg(o, unsigned int);
-    unsigned int tm = n;
+	int cnt = 0, i;
+	int *arr;
+	unsigned int n = va_arg(octo, unsigned int);
+	unsigned int t = n;
 
-    while (n / 8 != 0)
-    {
-        n /= 8;
-        coun++;
-    }
-    coun++;
-    a = malloc(coun * sizeof(int));
-    for (i = 0; i < coun; i++)
-    {
-        a[i] = tm % 8;
-        tm /= 8;
-    }
-    for (i = coun - 1; i >= 0; i--)
-    {
-        _putchar(a[i] + '0');
-    }
-    free(a);
-    return (coun);
+	while (n / 8 != 0)
+	{
+		n /= 8;
+		++cnt;
+	}
+	++cnt;
+	arr = malloc(cnt * sizeof(int));
+	for (i = 0; i < cnt; ++i)
+	{
+		arr[i] = t % 8;
+		t /= 8;
+	}
+	for (i = cnt - 1; i >= 0; --i)
+	{
+		_putchar(arr[i] + '0');
+	}
+	free(arr);
+	return (cnt);
 }
