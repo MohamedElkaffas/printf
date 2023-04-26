@@ -15,7 +15,7 @@ int _bin(va_list bin)
 	while (n / 2 != 0)
 	{
 		n /= 2;
-		count++;
+		cnt++;
 	}
 	++cnt;
 	arr = malloc(cnt * sizeof(int));
@@ -24,12 +24,12 @@ int _bin(va_list bin)
 		free(arr);
 		return (0);
 	}
-	for (i = 0; i < count; i++)
+	for (i = 0; i < cnt; i++)
 	{
 		arr[i] = tmp % 2;
 		tmp /= 2;
 	}
-	for (i = count - 1; i >= 0; i--)
+	for (i = cnt - 1; i >= 0; i--)
 	{
 		_putchar(arr[i] + '0');
 	}
