@@ -13,8 +13,8 @@
 
 typedef struct fmt
 {
-	char *type;
-	int (*f)();
+        char *type;
+        int (*f)();
 } fmtyp;
 
 int _printf(const char *format, ...);
