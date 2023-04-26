@@ -58,7 +58,7 @@ To print a sentence with conversion specifiers:
 .RE
 
 .RS 8
-#include "holberton.h"
+#include "main.h"
 
 _printf("The %s jumped %d times!", "dog", 4);
 .RE
